@@ -1205,6 +1205,7 @@ void ScopDetection::removeCachedResults(const Region &R) {
 }
 
 void ScopDetection::findScops(Region &R) {
+  
   const auto &It = DetectionContextMap.insert(std::make_pair(
       getBBPairForRegion(&R), DetectionContext(R, *AA, false /*verifying*/)));
   DetectionContext &Context = It.first->second;
@@ -1504,15 +1505,21 @@ bool ScopDetection::isReducibleRegion(Region &R, DebugLoc &DbgLoc) const {
 }
 
 bool ScopDetection::runOnFunction(llvm::Function &F) {
+
   LI = &getAnalysis<LoopInfoWrapperPass>().getLoopInfo();
   RI = &getAnalysis<RegionInfoPass>().getRegionInfo();
   if (!PollyProcessUnprofitable && LI->empty())
     return false;
-
+  
   AA = &getAnalysis<AAResultsWrapperPass>().getAAResults();
   SE = &getAnalysis<ScalarEvolutionWrapperPass>().getSE();
   DT = &getAnalysis<DominatorTreeWrapperPass>().getDomTree();
   Region *TopRegion = RI->getTopLevelRegion();
+
+  for (auto &b : F) {
+    errs() << "---BLOCK---\n";
+    b.dump();
+  }
 
   releaseMemory();
 

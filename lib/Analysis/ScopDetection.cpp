@@ -90,6 +90,14 @@ static cl::opt<bool, true> XPollyProcessUnprofitable(
     cl::location(PollyProcessUnprofitable), cl::init(false), cl::ZeroOrMore,
     cl::cat(PollyCategory));
 
+bool polly::PollyOpenCLKernel;
+static cl::opt<bool, true> XPollyOpenCLKernel(
+    "polly-opencl-kernel",
+    cl::desc(
+        "Treat program as OpenCL kernel with implicit loops."),
+    cl::location(PollyOpenCLKernel), cl::init(false), cl::ZeroOrMore,
+    cl::cat(PollyCategory));
+
 static cl::opt<std::string> OnlyFunction(
     "polly-only-func",
     cl::desc("Only run on functions that contain a certain string"),
@@ -1181,6 +1189,8 @@ Region *ScopDetection::expandRegion(Region &R) {
   return LastValidRegion.release();
 }
 static bool regionWithoutLoops(Region &R, LoopInfo *LI) {
+  if (PollyOpenCLKernel && R.isTopLevelRegion())
+      return true;
   for (const BasicBlock *BB : R.blocks())
     if (R.contains(LI->getLoopFor(BB)))
       return false;
@@ -1205,7 +1215,6 @@ void ScopDetection::removeCachedResults(const Region &R) {
 }
 
 void ScopDetection::findScops(Region &R) {
-  
   const auto &It = DetectionContextMap.insert(std::make_pair(
       getBBPairForRegion(&R), DetectionContext(R, *AA, false /*verifying*/)));
   DetectionContext &Context = It.first->second;
@@ -1215,6 +1224,8 @@ void ScopDetection::findScops(Region &R) {
     invalid<ReportUnprofitable>(Context, /*Assert=*/true, &R);
   else
     RegionIsValid = isValidRegion(Context);
+  errs() << regionWithoutLoops(R, LI) << "\n";
+  errs() << isValidRegion(Context) << "\n";
 
   bool HasErrors = !RegionIsValid || Context.Log.size() > 0;
 
@@ -1505,22 +1516,20 @@ bool ScopDetection::isReducibleRegion(Region &R, DebugLoc &DbgLoc) const {
 }
 
 bool ScopDetection::runOnFunction(llvm::Function &F) {
-
   LI = &getAnalysis<LoopInfoWrapperPass>().getLoopInfo();
   RI = &getAnalysis<RegionInfoPass>().getRegionInfo();
   if (!PollyProcessUnprofitable && LI->empty())
     return false;
-  
+
   AA = &getAnalysis<AAResultsWrapperPass>().getAAResults();
   SE = &getAnalysis<ScalarEvolutionWrapperPass>().getSE();
   DT = &getAnalysis<DominatorTreeWrapperPass>().getDomTree();
   Region *TopRegion = RI->getTopLevelRegion();
 
-  for (auto &b : F) {
-    errs() << "---BLOCK---\n";
-    b.dump();
-  }
-
+  // for (auto &b : F) {
+  //   errs() << "---BLOCK---\n";
+  //   b.dump();
+  // }
   releaseMemory();
 
   if (OnlyFunction != "" && !F.getName().count(OnlyFunction))
@@ -1531,6 +1540,8 @@ bool ScopDetection::runOnFunction(llvm::Function &F) {
 
   findScops(*TopRegion);
 
+  errs() << "Num of Valid Regions : " << ValidRegions.size() << "\n";
+
   // Prune non-profitable regions.
   for (auto &DIt : DetectionContextMap) {
     auto &DC = DIt.getSecond();
@@ -1540,7 +1551,6 @@ bool ScopDetection::runOnFunction(llvm::Function &F) {
       continue;
     if (isProfitableRegion(DC))
       continue;
-
     ValidRegions.remove(&DC.CurRegion);
   }
 

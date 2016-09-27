@@ -10,7 +10,7 @@ float CC[N][N];
 
 
 int main(int argc, char* argv[]){
-    // int i,j,k;
+    int i,j,k;
     int q = argv[0][0];
     A[q] = B[q] + C[q];
     // for (i=0; i<N; i++){

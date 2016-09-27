@@ -11,22 +11,23 @@ target triple = "x86_64-unknown-linux-gnu"
 @CC = common global [1536 x [1536 x float]] zeroinitializer, align 16
 
 ; Function Attrs: nounwind uwtable
-define i32 @main(i32, i8**) #0 {
-  br label %.split
+define i32 @main(i32 %argc, i8** %argv) #0 {
+entry:
+  br label %entry.split
 
-.split:                                           ; preds = %2
-  %3 = load i8*, i8** %1, align 8
-  %4 = load i8, i8* %3, align 1
-  %5 = sext i8 %4 to i64
-  %6 = getelementptr inbounds [1536 x float], [1536 x float]* @B, i64 0, i64 %5
-  %7 = load float, float* %6, align 4
-  %8 = sext i8 %4 to i64
-  %9 = getelementptr inbounds [1536 x float], [1536 x float]* @C, i64 0, i64 %8
-  %10 = load float, float* %9, align 4
-  %11 = fadd float %7, %10
-  %12 = sext i8 %4 to i64
-  %13 = getelementptr inbounds [1536 x float], [1536 x float]* @A, i64 0, i64 %12
-  store float %11, float* %13, align 4
+entry.split:                                      ; preds = %entry
+  %0 = load i8*, i8** %argv, align 8
+  %1 = load i8, i8* %0, align 1
+  %idxprom = sext i8 %1 to i64
+  %arrayidx2 = getelementptr inbounds [1536 x float], [1536 x float]* @B, i64 0, i64 %idxprom
+  %2 = load float, float* %arrayidx2, align 4
+  %idxprom3 = sext i8 %1 to i64
+  %arrayidx4 = getelementptr inbounds [1536 x float], [1536 x float]* @C, i64 0, i64 %idxprom3
+  %3 = load float, float* %arrayidx4, align 4
+  %add = fadd float %2, %3
+  %idxprom5 = sext i8 %1 to i64
+  %arrayidx6 = getelementptr inbounds [1536 x float], [1536 x float]* @A, i64 0, i64 %idxprom5
+  store float %add, float* %arrayidx6, align 4
   ret i32 0
 }
 
@@ -34,4 +35,4 @@ attributes #0 = { nounwind uwtable "disable-tail-calls"="false" "less-precise-fp
 
 !llvm.ident = !{!0}
 
-!0 = !{!"clang version 3.9.1 (http://llvm.org/git/clang.git 07307f95d5c82d453cdc5c23f9ccd53d5ff75426) (https://github.com/tj-sun/llvm.git 69e56220929e4bffe0cd01251f47e1540809c3d9)"}
+!0 = !{!"clang version 3.9.1 (http://llvm.org/git/clang.git 07307f95d5c82d453cdc5c23f9ccd53d5ff75426) (https://github.com/tj-sun/llvm.git 805bc7c089155ab329a63b926e11904e118c35d5)"}

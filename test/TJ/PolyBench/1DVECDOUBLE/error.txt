@@ -1,0 +1,1856 @@
+clang -cc1 version 3.6.0 based upon LLVM 3.6.0svn default target x86_64-unknown-linux-gnu
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /home/tianjiao/projects/3.9/ComputeCpp-CE-0.1-Linux/bin/../lib/clang/3.6.0/include
+ /usr/include
+End of search list.
+In file included from <built-in>:300:
+In file included from <command line>:1:
+./opencl_spir.h:123:9: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+typedef double double2 __attribute__((ext_vector_type(2)));
+        ^
+./opencl_spir.h:124:9: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+typedef double double3 __attribute__((ext_vector_type(3)));
+        ^
+./opencl_spir.h:125:9: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+typedef double double4 __attribute__((ext_vector_type(4)));
+        ^
+./opencl_spir.h:126:9: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+typedef double double8 __attribute__((ext_vector_type(8)));
+        ^
+./opencl_spir.h:127:9: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+typedef double double16 __attribute__((ext_vector_type(16)));
+        ^
+./opencl_spir.h:325:5: warning: incompatible redeclaration of library function 'printf'
+int printf(__constant const char* st, ...);
+    ^
+./opencl_spir.h:325:5: note: 'printf' is a builtin with type 'int (const char *, ...)'
+./opencl_spir.h:331:48: warning: incompatible redeclaration of library function 'acos'
+float const_func __attribute__((overloadable)) acos(float);
+                                               ^
+./opencl_spir.h:331:48: note: 'acos' is a builtin with type 'double (double)'
+./opencl_spir.h:337:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) acos(double);
+                                                     ^
+./opencl_spir.h:337:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) acos(double);
+^
+./opencl_spir.h:353:48: warning: incompatible redeclaration of library function 'acosh'
+float const_func __attribute__((overloadable)) acosh(float);
+                                               ^
+./opencl_spir.h:353:48: note: 'acosh' is a builtin with type 'double (double)'
+./opencl_spir.h:359:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) acosh(double);
+                                                      ^
+./opencl_spir.h:359:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) acosh(double);
+^
+./opencl_spir.h:381:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) acospi(double x);
+                                                       ^
+./opencl_spir.h:381:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) acospi(double x);
+^
+./opencl_spir.h:397:48: warning: incompatible redeclaration of library function 'asin'
+float const_func __attribute__((overloadable)) asin(float);
+                                               ^
+./opencl_spir.h:397:48: note: 'asin' is a builtin with type 'double (double)'
+./opencl_spir.h:403:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) asin(double);
+                                                     ^
+./opencl_spir.h:403:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) asin(double);
+^
+./opencl_spir.h:419:48: warning: incompatible redeclaration of library function 'asinh'
+float const_func __attribute__((overloadable)) asinh(float);
+                                               ^
+./opencl_spir.h:419:48: note: 'asinh' is a builtin with type 'double (double)'
+./opencl_spir.h:425:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) asinh(double);
+                                                      ^
+./opencl_spir.h:425:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) asinh(double);
+^
+./opencl_spir.h:447:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) asinpi(double x);
+                                                       ^
+./opencl_spir.h:447:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) asinpi(double x);
+^
+./opencl_spir.h:463:48: warning: incompatible redeclaration of library function 'atan'
+float const_func __attribute__((overloadable)) atan(float y_over_x);
+                                               ^
+./opencl_spir.h:463:48: note: 'atan' is a builtin with type 'double (double)'
+./opencl_spir.h:469:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atan(double y_over_x);
+                                                     ^
+./opencl_spir.h:469:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atan(double y_over_x);
+^
+./opencl_spir.h:485:48: warning: incompatible redeclaration of library function 'atan2'
+float const_func __attribute__((overloadable)) atan2(float y, float x);
+                                               ^
+./opencl_spir.h:485:48: note: 'atan2' is a builtin with type 'double (double, double)'
+./opencl_spir.h:491:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atan2(double y, double x);
+                                                      ^
+./opencl_spir.h:491:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atan2(double y, double x);
+                                                                ^
+./opencl_spir.h:491:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atan2(double y, double x);
+^
+./opencl_spir.h:507:48: warning: incompatible redeclaration of library function 'atanh'
+float const_func __attribute__((overloadable)) atanh(float);
+                                               ^
+./opencl_spir.h:507:48: note: 'atanh' is a builtin with type 'double (double)'
+./opencl_spir.h:513:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atanh(double);
+                                                      ^
+./opencl_spir.h:513:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atanh(double);
+^
+./opencl_spir.h:535:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atanpi(double x);
+                                                       ^
+./opencl_spir.h:535:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atanpi(double x);
+^
+./opencl_spir.h:557:57: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atan2pi(double y, double x);
+                                                        ^
+./opencl_spir.h:557:67: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atan2pi(double y, double x);
+                                                                  ^
+./opencl_spir.h:557:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) atan2pi(double y, double x);
+^
+./opencl_spir.h:573:48: warning: incompatible redeclaration of library function 'cbrt'
+float const_func __attribute__((overloadable)) cbrt(float);
+                                               ^
+./opencl_spir.h:573:48: note: 'cbrt' is a builtin with type 'double (double)'
+./opencl_spir.h:579:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) cbrt(double);
+                                                     ^
+./opencl_spir.h:579:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) cbrt(double);
+^
+./opencl_spir.h:596:48: warning: incompatible redeclaration of library function 'ceil'
+float const_func __attribute__((overloadable)) ceil(float);
+                                               ^
+./opencl_spir.h:596:48: note: 'ceil' is a builtin with type 'double (double)'
+./opencl_spir.h:602:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) ceil(double);
+                                                     ^
+./opencl_spir.h:602:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) ceil(double);
+^
+./opencl_spir.h:619:48: warning: incompatible redeclaration of library function 'copysign'
+float const_func __attribute__((overloadable)) copysign(float x, float y);
+                                               ^
+./opencl_spir.h:619:48: note: 'copysign' is a builtin with type 'double (double, double)'
+./opencl_spir.h:625:58: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) copysign(double x, double y);
+                                                         ^
+./opencl_spir.h:625:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) copysign(double x, double y);
+                                                                   ^
+./opencl_spir.h:625:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) copysign(double x, double y);
+^
+./opencl_spir.h:641:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) cos(double);
+                                                    ^
+./opencl_spir.h:641:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) cos(double);
+^
+./opencl_spir.h:642:50: warning: incompatible redeclaration of library function 'cos'
+double2 const_func __attribute__((overloadable)) cos(double2);
+                                                 ^
+./opencl_spir.h:641:49: note: 'cos' is a builtin with type 'double (double)'
+double const_func __attribute__((overloadable)) cos(double);
+                                                ^
+./opencl_spir.h:663:48: warning: incompatible redeclaration of library function 'cosh'
+float const_func __attribute__((overloadable)) cosh(float);
+                                               ^
+./opencl_spir.h:663:48: note: 'cosh' is a builtin with type 'double (double)'
+./opencl_spir.h:669:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) cosh(double);
+                                                     ^
+./opencl_spir.h:669:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) cosh(double);
+^
+./opencl_spir.h:691:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) cospi(double x);
+                                                      ^
+./opencl_spir.h:691:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) cospi(double x);
+^
+./opencl_spir.h:707:48: warning: incompatible redeclaration of library function 'erfc'
+float const_func __attribute__((overloadable)) erfc(float);
+                                               ^
+./opencl_spir.h:707:48: note: 'erfc' is a builtin with type 'double (double)'
+./opencl_spir.h:713:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) erfc(double);
+                                                     ^
+./opencl_spir.h:713:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) erfc(double);
+^
+./opencl_spir.h:730:48: warning: incompatible redeclaration of library function 'erf'
+float const_func __attribute__((overloadable)) erf(float);
+                                               ^
+./opencl_spir.h:730:48: note: 'erf' is a builtin with type 'double (double)'
+./opencl_spir.h:736:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) erf(double);
+                                                    ^
+./opencl_spir.h:736:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) erf(double);
+^
+./opencl_spir.h:752:48: warning: incompatible redeclaration of library function 'exp'
+float const_func __attribute__((overloadable)) exp(float x);
+                                               ^
+./opencl_spir.h:752:48: note: 'exp' is a builtin with type 'double (double)'
+./opencl_spir.h:758:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) exp(double x);
+                                                    ^
+./opencl_spir.h:758:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) exp(double x);
+^
+./opencl_spir.h:774:48: warning: incompatible redeclaration of library function 'exp2'
+float const_func __attribute__((overloadable)) exp2(float);
+                                               ^
+./opencl_spir.h:774:48: note: 'exp2' is a builtin with type 'double (double)'
+./opencl_spir.h:780:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) exp2(double);
+                                                     ^
+./opencl_spir.h:780:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) exp2(double);
+^
+./opencl_spir.h:802:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) exp10(double);
+                                                      ^
+./opencl_spir.h:802:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) exp10(double);
+^
+./opencl_spir.h:818:48: warning: incompatible redeclaration of library function 'expm1'
+float const_func __attribute__((overloadable)) expm1(float x);
+                                               ^
+./opencl_spir.h:818:48: note: 'expm1' is a builtin with type 'double (double)'
+./opencl_spir.h:824:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) expm1(double x);
+                                                      ^
+./opencl_spir.h:824:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) expm1(double x);
+^
+./opencl_spir.h:840:48: warning: incompatible redeclaration of library function 'fabs'
+float const_func __attribute__((overloadable)) fabs(float);
+                                               ^
+./opencl_spir.h:840:48: note: 'fabs' is a builtin with type 'double (double)'
+./opencl_spir.h:846:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fabs(double);
+                                                     ^
+./opencl_spir.h:846:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fabs(double);
+^
+./opencl_spir.h:862:48: warning: incompatible redeclaration of library function 'fdim'
+float const_func __attribute__((overloadable)) fdim(float x, float y);
+                                               ^
+./opencl_spir.h:862:48: note: 'fdim' is a builtin with type 'double (double, double)'
+./opencl_spir.h:868:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fdim(double x, double y);
+                                                     ^
+./opencl_spir.h:868:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fdim(double x, double y);
+                                                               ^
+./opencl_spir.h:868:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fdim(double x, double y);
+^
+./opencl_spir.h:885:48: warning: incompatible redeclaration of library function 'floor'
+float const_func __attribute__((overloadable)) floor(float);
+                                               ^
+./opencl_spir.h:885:48: note: 'floor' is a builtin with type 'double (double)'
+./opencl_spir.h:891:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) floor(double);
+                                                      ^
+./opencl_spir.h:891:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) floor(double);
+^
+./opencl_spir.h:911:48: warning: incompatible redeclaration of library function 'fma'
+float const_func __attribute__((overloadable)) fma(float a, float b, float c);
+                                               ^
+./opencl_spir.h:911:48: note: 'fma' is a builtin with type 'double (double, double, double)'
+./opencl_spir.h:917:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fma(double a, double b, double c);
+                                                    ^
+./opencl_spir.h:917:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fma(double a, double b, double c);
+                                                              ^
+./opencl_spir.h:917:73: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fma(double a, double b, double c);
+                                                                        ^
+./opencl_spir.h:917:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fma(double a, double b, double c);
+^
+./opencl_spir.h:936:48: warning: incompatible redeclaration of library function 'fmax'
+float const_func __attribute__((overloadable)) fmax(float x, float y);
+                                               ^
+./opencl_spir.h:936:48: note: 'fmax' is a builtin with type 'double (double, double)'
+./opencl_spir.h:947:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fmax(double x, double y);
+                                                     ^
+./opencl_spir.h:947:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fmax(double x, double y);
+                                                               ^
+./opencl_spir.h:947:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fmax(double x, double y);
+^
+./opencl_spir.h:953:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 const_func __attribute__((overloadable)) fmax(double2 x, double y);
+                                                                 ^
+./opencl_spir.h:954:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 const_func __attribute__((overloadable)) fmax(double3 x, double y);
+                                                                 ^
+./opencl_spir.h:955:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 const_func __attribute__((overloadable)) fmax(double4 x, double y);
+                                                                 ^
+./opencl_spir.h:956:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 const_func __attribute__((overloadable)) fmax(double8 x, double y);
+                                                                 ^
+./opencl_spir.h:957:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 const_func __attribute__((overloadable)) fmax(double16 x, double y);
+                                                                   ^
+./opencl_spir.h:976:48: warning: incompatible redeclaration of library function 'fmin'
+float const_func __attribute__((overloadable)) fmin(float x, float y);
+                                               ^
+./opencl_spir.h:976:48: note: 'fmin' is a builtin with type 'double (double, double)'
+./opencl_spir.h:987:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fmin(double x, double y);
+                                                     ^
+./opencl_spir.h:987:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fmin(double x, double y);
+                                                               ^
+./opencl_spir.h:987:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fmin(double x, double y);
+^
+./opencl_spir.h:993:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 const_func __attribute__((overloadable)) fmin(double2 x, double y);
+                                                                 ^
+./opencl_spir.h:994:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 const_func __attribute__((overloadable)) fmin(double3 x, double y);
+                                                                 ^
+./opencl_spir.h:995:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 const_func __attribute__((overloadable)) fmin(double4 x, double y);
+                                                                 ^
+./opencl_spir.h:996:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 const_func __attribute__((overloadable)) fmin(double8 x, double y);
+                                                                 ^
+./opencl_spir.h:997:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 const_func __attribute__((overloadable)) fmin(double16 x, double y);
+                                                                   ^
+./opencl_spir.h:1013:48: warning: incompatible redeclaration of library function 'fmod'
+float const_func __attribute__((overloadable)) fmod(float x, float y);
+                                               ^
+./opencl_spir.h:1013:48: note: 'fmod' is a builtin with type 'double (double, double)'
+./opencl_spir.h:1019:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fmod(double x, double y);
+                                                     ^
+./opencl_spir.h:1019:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fmod(double x, double y);
+                                                               ^
+./opencl_spir.h:1019:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) fmod(double x, double y);
+^
+./opencl_spir.h:1054:44: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) fract(double x, __global double *iptr);
+                                           ^
+./opencl_spir.h:1054:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) fract(double x, __global double *iptr);
+                                                              ^
+./opencl_spir.h:1054:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) fract(double x, __global double *iptr);
+^
+./opencl_spir.h:1060:44: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) fract(double x, __local double *iptr);
+                                           ^
+./opencl_spir.h:1060:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) fract(double x, __local double *iptr);
+                                                             ^
+./opencl_spir.h:1060:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) fract(double x, __local double *iptr);
+^
+./opencl_spir.h:1066:44: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) fract(double x, __private double *iptr);
+                                           ^
+./opencl_spir.h:1066:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) fract(double x, __private double *iptr);
+                                                               ^
+./opencl_spir.h:1066:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) fract(double x, __private double *iptr);
+^
+./opencl_spir.h:1098:37: warning: incompatible redeclaration of library function 'frexp'
+float __attribute__((overloadable)) frexp(float x, __global int *exp);
+                                    ^
+./opencl_spir.h:1098:37: note: 'frexp' is a builtin with type 'double (double, int *)'
+./opencl_spir.h:1116:44: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) frexp(double x, __global int *exp);
+                                           ^
+./opencl_spir.h:1116:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) frexp(double x, __global int *exp);
+^
+./opencl_spir.h:1122:44: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) frexp(double x, __local int *exp);
+                                           ^
+./opencl_spir.h:1122:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) frexp(double x, __local int *exp);
+^
+./opencl_spir.h:1128:44: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) frexp(double x, __private int *exp);
+                                           ^
+./opencl_spir.h:1128:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) frexp(double x, __private int *exp);
+^
+./opencl_spir.h:1157:48: warning: incompatible redeclaration of library function 'hypot'
+float const_func __attribute__((overloadable)) hypot(float x, float y);
+                                               ^
+./opencl_spir.h:1157:48: note: 'hypot' is a builtin with type 'double (double, double)'
+./opencl_spir.h:1163:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) hypot(double x, double y);
+                                                      ^
+./opencl_spir.h:1163:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) hypot(double x, double y);
+                                                                ^
+./opencl_spir.h:1163:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) hypot(double x, double y);
+^
+./opencl_spir.h:1179:46: warning: incompatible redeclaration of library function 'ilogb'
+int const_func __attribute__((overloadable)) ilogb(float x);
+                                             ^
+./opencl_spir.h:1179:46: note: 'ilogb' is a builtin with type 'int (double)'
+./opencl_spir.h:1185:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) ilogb(double x);
+                                                   ^
+./opencl_spir.h:1201:48: warning: incompatible redeclaration of library function 'ldexp'
+float const_func __attribute__((overloadable)) ldexp(float x, int n);
+                                               ^
+./opencl_spir.h:1201:48: note: 'ldexp' is a builtin with type 'double (double, int)'
+./opencl_spir.h:1212:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) ldexp(double x, int n);
+                                                      ^
+./opencl_spir.h:1212:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) ldexp(double x, int n);
+^
+./opencl_spir.h:1242:48: warning: incompatible redeclaration of library function 'lgamma'
+float const_func __attribute__((overloadable)) lgamma(float x);
+                                               ^
+./opencl_spir.h:1242:48: note: 'lgamma' is a builtin with type 'double (double)'
+./opencl_spir.h:1248:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) lgamma(double x);
+                                                       ^
+./opencl_spir.h:1248:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) lgamma(double x);
+^
+./opencl_spir.h:1279:47: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) lgamma_r(double x, __global int *signp);
+                                              ^
+./opencl_spir.h:1279:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) lgamma_r(double x, __global int *signp);
+^
+./opencl_spir.h:1285:47: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) lgamma_r(double x, __local int *signp);
+                                              ^
+./opencl_spir.h:1285:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) lgamma_r(double x, __local int *signp);
+^
+./opencl_spir.h:1291:47: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) lgamma_r(double x, __private int *signp);
+                                              ^
+./opencl_spir.h:1291:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) lgamma_r(double x, __private int *signp);
+^
+./opencl_spir.h:1319:48: warning: incompatible redeclaration of library function 'log'
+float const_func __attribute__((overloadable)) log(float);
+                                               ^
+./opencl_spir.h:1319:48: note: 'log' is a builtin with type 'double (double)'
+./opencl_spir.h:1325:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) log(double);
+                                                    ^
+./opencl_spir.h:1325:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) log(double);
+^
+./opencl_spir.h:1341:48: warning: incompatible redeclaration of library function 'log2'
+float const_func __attribute__((overloadable)) log2(float);
+                                               ^
+./opencl_spir.h:1341:48: note: 'log2' is a builtin with type 'double (double)'
+./opencl_spir.h:1347:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) log2(double);
+                                                     ^
+./opencl_spir.h:1347:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) log2(double);
+^
+./opencl_spir.h:1363:48: warning: incompatible redeclaration of library function 'log10'
+float const_func __attribute__((overloadable)) log10(float);
+                                               ^
+./opencl_spir.h:1363:48: note: 'log10' is a builtin with type 'double (double)'
+./opencl_spir.h:1369:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) log10(double);
+                                                      ^
+./opencl_spir.h:1369:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) log10(double);
+^
+./opencl_spir.h:1385:48: warning: incompatible redeclaration of library function 'log1p'
+float const_func __attribute__((overloadable)) log1p(float x);
+                                               ^
+./opencl_spir.h:1385:48: note: 'log1p' is a builtin with type 'double (double)'
+./opencl_spir.h:1391:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) log1p(double x);
+                                                      ^
+./opencl_spir.h:1391:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) log1p(double x);
+^
+./opencl_spir.h:1408:48: warning: incompatible redeclaration of library function 'logb'
+float const_func __attribute__((overloadable)) logb(float x);
+                                               ^
+./opencl_spir.h:1408:48: note: 'logb' is a builtin with type 'double (double)'
+./opencl_spir.h:1414:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) logb(double x);
+                                                     ^
+./opencl_spir.h:1414:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) logb(double x);
+^
+./opencl_spir.h:1440:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) mad(double a, double b, double c);
+                                                    ^
+./opencl_spir.h:1440:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) mad(double a, double b, double c);
+                                                              ^
+./opencl_spir.h:1440:73: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) mad(double a, double b, double c);
+                                                                        ^
+./opencl_spir.h:1440:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) mad(double a, double b, double c);
+^
+./opencl_spir.h:1463:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) maxmag(double x, double y);
+                                                       ^
+./opencl_spir.h:1463:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) maxmag(double x, double y);
+                                                                 ^
+./opencl_spir.h:1463:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) maxmag(double x, double y);
+^
+./opencl_spir.h:1486:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) minmag(double x, double y);
+                                                       ^
+./opencl_spir.h:1486:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) minmag(double x, double y);
+                                                                 ^
+./opencl_spir.h:1486:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) minmag(double x, double y);
+^
+./opencl_spir.h:1506:37: warning: incompatible redeclaration of library function 'modf'
+float __attribute__((overloadable)) modf(float x, __global float *iptr);
+                                    ^
+./opencl_spir.h:1506:37: note: 'modf' is a builtin with type 'double (double, double *)'
+./opencl_spir.h:1524:43: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) modf(double x, __global double *iptr);
+                                          ^
+./opencl_spir.h:1524:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) modf(double x, __global double *iptr);
+                                                             ^
+./opencl_spir.h:1524:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) modf(double x, __global double *iptr);
+^
+./opencl_spir.h:1530:43: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) modf(double x, __local double *iptr);
+                                          ^
+./opencl_spir.h:1530:61: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) modf(double x, __local double *iptr);
+                                                            ^
+./opencl_spir.h:1530:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) modf(double x, __local double *iptr);
+^
+./opencl_spir.h:1536:43: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) modf(double x, __private double *iptr);
+                                          ^
+./opencl_spir.h:1536:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) modf(double x, __private double *iptr);
+                                                              ^
+./opencl_spir.h:1536:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) modf(double x, __private double *iptr);
+^
+./opencl_spir.h:1565:48: warning: incompatible redeclaration of library function 'nan'
+float const_func __attribute__((overloadable)) nan(uint nancode);
+                                               ^
+./opencl_spir.h:1565:48: note: 'nan' is a builtin with type 'double (const char *)'
+./opencl_spir.h:1571:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) nan(ulong nancode);
+^
+./opencl_spir.h:1591:48: warning: incompatible redeclaration of library function 'nextafter'
+float const_func __attribute__((overloadable)) nextafter(float x, float y);
+                                               ^
+./opencl_spir.h:1591:48: note: 'nextafter' is a builtin with type 'double (double, double)'
+./opencl_spir.h:1597:59: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) nextafter(double x, double y);
+                                                          ^
+./opencl_spir.h:1597:69: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) nextafter(double x, double y);
+                                                                    ^
+./opencl_spir.h:1597:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) nextafter(double x, double y);
+^
+./opencl_spir.h:1613:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) pow(double x, double y);
+                                                    ^
+./opencl_spir.h:1613:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) pow(double x, double y);
+                                                              ^
+./opencl_spir.h:1613:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) pow(double x, double y);
+^
+./opencl_spir.h:1614:50: warning: incompatible redeclaration of library function 'pow'
+double2 const_func __attribute__((overloadable)) pow(double2 x, double2 y);
+                                                 ^
+./opencl_spir.h:1613:49: note: 'pow' is a builtin with type 'double (double, double)'
+double const_func __attribute__((overloadable)) pow(double x, double y);
+                                                ^
+./opencl_spir.h:1641:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) pown(double x, int y);
+                                                     ^
+./opencl_spir.h:1641:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) pown(double x, int y);
+^
+./opencl_spir.h:1663:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) powr(double x, double y);
+                                                     ^
+./opencl_spir.h:1663:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) powr(double x, double y);
+                                                               ^
+./opencl_spir.h:1663:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) powr(double x, double y);
+^
+./opencl_spir.h:1682:48: warning: incompatible redeclaration of library function 'remainder'
+float const_func __attribute__((overloadable)) remainder(float x, float y);
+                                               ^
+./opencl_spir.h:1682:48: note: 'remainder' is a builtin with type 'double (double, double)'
+./opencl_spir.h:1688:59: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) remainder(double x, double y);
+                                                          ^
+./opencl_spir.h:1688:69: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) remainder(double x, double y);
+                                                                    ^
+./opencl_spir.h:1688:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) remainder(double x, double y);
+^
+./opencl_spir.h:1731:45: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) remquo(double x, double y, __global int *quo);
+                                            ^
+./opencl_spir.h:1731:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) remquo(double x, double y, __global int *quo);
+                                                      ^
+./opencl_spir.h:1731:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) remquo(double x, double y, __global int *quo);
+^
+./opencl_spir.h:1737:45: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) remquo(double x, double y, __local int *quo);
+                                            ^
+./opencl_spir.h:1737:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) remquo(double x, double y, __local int *quo);
+                                                      ^
+./opencl_spir.h:1737:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) remquo(double x, double y, __local int *quo);
+^
+./opencl_spir.h:1743:45: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) remquo(double x, double y, __private int *quo);
+                                            ^
+./opencl_spir.h:1743:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) remquo(double x, double y, __private int *quo);
+                                                      ^
+./opencl_spir.h:1743:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) remquo(double x, double y, __private int *quo);
+^
+./opencl_spir.h:1774:48: warning: incompatible redeclaration of library function 'rint'
+float const_func __attribute__((overloadable)) rint(float);
+                                               ^
+./opencl_spir.h:1774:48: note: 'rint' is a builtin with type 'double (double)'
+./opencl_spir.h:1780:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) rint(double);
+                                                     ^
+./opencl_spir.h:1780:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) rint(double);
+^
+./opencl_spir.h:1802:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) rootn(double x, int y);
+                                                      ^
+./opencl_spir.h:1802:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) rootn(double x, int y);
+^
+./opencl_spir.h:1820:48: warning: incompatible redeclaration of library function 'round'
+float const_func __attribute__((overloadable)) round(float x);
+                                               ^
+./opencl_spir.h:1820:48: note: 'round' is a builtin with type 'double (double)'
+./opencl_spir.h:1826:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) round(double x);
+                                                      ^
+./opencl_spir.h:1826:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) round(double x);
+^
+./opencl_spir.h:1848:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) rsqrt(double);
+                                                      ^
+./opencl_spir.h:1848:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) rsqrt(double);
+^
+./opencl_spir.h:1864:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) sin(double);
+                                                    ^
+./opencl_spir.h:1864:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) sin(double);
+^
+./opencl_spir.h:1865:50: warning: incompatible redeclaration of library function 'sin'
+double2 const_func __attribute__((overloadable)) sin(double2);
+                                                 ^
+./opencl_spir.h:1864:49: note: 'sin' is a builtin with type 'double (double)'
+double const_func __attribute__((overloadable)) sin(double);
+                                                ^
+./opencl_spir.h:1906:45: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) sincos(double x, __global double *cosval);
+                                            ^
+./opencl_spir.h:1906:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) sincos(double x, __global double *cosval);
+                                                               ^
+./opencl_spir.h:1906:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) sincos(double x, __global double *cosval);
+^
+./opencl_spir.h:1912:45: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) sincos(double x, __local double *cosval);
+                                            ^
+./opencl_spir.h:1912:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) sincos(double x, __local double *cosval);
+                                                              ^
+./opencl_spir.h:1912:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) sincos(double x, __local double *cosval);
+^
+./opencl_spir.h:1918:45: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) sincos(double x, __private double *cosval);
+                                            ^
+./opencl_spir.h:1918:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) sincos(double x, __private double *cosval);
+                                                                ^
+./opencl_spir.h:1918:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double __attribute__((overloadable)) sincos(double x, __private double *cosval);
+^
+./opencl_spir.h:1946:48: warning: incompatible redeclaration of library function 'sinh'
+float const_func __attribute__((overloadable)) sinh(float);
+                                               ^
+./opencl_spir.h:1946:48: note: 'sinh' is a builtin with type 'double (double)'
+./opencl_spir.h:1952:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) sinh(double);
+                                                     ^
+./opencl_spir.h:1952:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) sinh(double);
+^
+./opencl_spir.h:1974:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) sinpi(double x);
+                                                      ^
+./opencl_spir.h:1974:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) sinpi(double x);
+^
+./opencl_spir.h:1990:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) sqrt(double);
+                                                     ^
+./opencl_spir.h:1990:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) sqrt(double);
+^
+./opencl_spir.h:1991:50: warning: incompatible redeclaration of library function 'sqrt'
+double2 const_func __attribute__((overloadable)) sqrt(double2);
+                                                 ^
+./opencl_spir.h:1990:49: note: 'sqrt' is a builtin with type 'double (double)'
+double const_func __attribute__((overloadable)) sqrt(double);
+                                                ^
+./opencl_spir.h:2012:48: warning: incompatible redeclaration of library function 'tan'
+float const_func __attribute__((overloadable)) tan(float);
+                                               ^
+./opencl_spir.h:2012:48: note: 'tan' is a builtin with type 'double (double)'
+./opencl_spir.h:2018:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) tan(double);
+                                                    ^
+./opencl_spir.h:2018:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) tan(double);
+^
+./opencl_spir.h:2034:48: warning: incompatible redeclaration of library function 'tanh'
+float const_func __attribute__((overloadable)) tanh(float);
+                                               ^
+./opencl_spir.h:2034:48: note: 'tanh' is a builtin with type 'double (double)'
+./opencl_spir.h:2040:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) tanh(double);
+                                                     ^
+./opencl_spir.h:2040:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) tanh(double);
+^
+./opencl_spir.h:2062:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) tanpi(double x);
+                                                      ^
+./opencl_spir.h:2062:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) tanpi(double x);
+^
+./opencl_spir.h:2078:48: warning: incompatible redeclaration of library function 'tgamma'
+float const_func __attribute__((overloadable)) tgamma(float);
+                                               ^
+./opencl_spir.h:2078:48: note: 'tgamma' is a builtin with type 'double (double)'
+./opencl_spir.h:2084:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) tgamma(double);
+                                                       ^
+./opencl_spir.h:2084:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) tgamma(double);
+^
+./opencl_spir.h:2101:48: warning: incompatible redeclaration of library function 'trunc'
+float const_func __attribute__((overloadable)) trunc(float);
+                                               ^
+./opencl_spir.h:2101:48: note: 'trunc' is a builtin with type 'double (double)'
+./opencl_spir.h:2107:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) trunc(double);
+                                                      ^
+./opencl_spir.h:2107:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) trunc(double);
+^
+./opencl_spir.h:2272:60: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) native_cos(double x);
+                                                           ^
+./opencl_spir.h:2272:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) native_cos(double x);
+^
+./opencl_spir.h:2291:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) native_divide(double x, double y);
+                                                              ^
+./opencl_spir.h:2291:73: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) native_divide(double x, double y);
+                                                                        ^
+./opencl_spir.h:2291:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) native_divide(double x, double y);
+^
+./opencl_spir.h:2440:48: warning: incompatible redeclaration of library function 'abs'
+uchar const_func __attribute__((overloadable)) abs(char x);
+                                               ^
+./opencl_spir.h:2440:48: note: 'abs' is a builtin with type 'int (int)'
+./opencl_spir.h:3480:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) clamp(double x, double minval, double maxval);
+                                                      ^
+./opencl_spir.h:3480:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) clamp(double x, double minval, double maxval);
+                                                                ^
+./opencl_spir.h:3480:80: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) clamp(double x, double minval, double maxval);
+                                                                               ^
+./opencl_spir.h:3480:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) clamp(double x, double minval, double maxval);
+^
+./opencl_spir.h:3486:67: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 const_func __attribute__((overloadable)) clamp(double2 x, double minval, double maxval);
+                                                                  ^
+./opencl_spir.h:3486:82: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 const_func __attribute__((overloadable)) clamp(double2 x, double minval, double maxval);
+                                                                                 ^
+./opencl_spir.h:3487:67: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 const_func __attribute__((overloadable)) clamp(double3 x, double minval, double maxval);
+                                                                  ^
+./opencl_spir.h:3487:82: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 const_func __attribute__((overloadable)) clamp(double3 x, double minval, double maxval);
+                                                                                 ^
+./opencl_spir.h:3488:67: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 const_func __attribute__((overloadable)) clamp(double4 x, double minval, double maxval);
+                                                                  ^
+./opencl_spir.h:3488:82: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 const_func __attribute__((overloadable)) clamp(double4 x, double minval, double maxval);
+                                                                                 ^
+./opencl_spir.h:3489:67: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 const_func __attribute__((overloadable)) clamp(double8 x, double minval, double maxval);
+                                                                  ^
+./opencl_spir.h:3489:82: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 const_func __attribute__((overloadable)) clamp(double8 x, double minval, double maxval);
+                                                                                 ^
+./opencl_spir.h:3490:69: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 const_func __attribute__((overloadable)) clamp(double16 x, double minval, double maxval);
+                                                                    ^
+./opencl_spir.h:3490:84: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 const_func __attribute__((overloadable)) clamp(double16 x, double minval, double maxval);
+                                                                                   ^
+./opencl_spir.h:3513:57: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) degrees(double radians);
+                                                        ^
+./opencl_spir.h:3513:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) degrees(double radians);
+^
+./opencl_spir.h:3541:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) max(double x, double y);
+                                                    ^
+./opencl_spir.h:3541:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) max(double x, double y);
+                                                              ^
+./opencl_spir.h:3541:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) max(double x, double y);
+^
+./opencl_spir.h:3547:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 const_func __attribute__((overloadable)) max(double2 x, double y);
+                                                                ^
+./opencl_spir.h:3548:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 const_func __attribute__((overloadable)) max(double3 x, double y);
+                                                                ^
+./opencl_spir.h:3549:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 const_func __attribute__((overloadable)) max(double4 x, double y);
+                                                                ^
+./opencl_spir.h:3550:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 const_func __attribute__((overloadable)) max(double8 x, double y);
+                                                                ^
+./opencl_spir.h:3551:67: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 const_func __attribute__((overloadable)) max(double16 x, double y);
+                                                                  ^
+./opencl_spir.h:3579:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) min(double x, double y);
+                                                    ^
+./opencl_spir.h:3579:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) min(double x, double y);
+                                                              ^
+./opencl_spir.h:3579:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) min(double x, double y);
+^
+./opencl_spir.h:3585:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 const_func __attribute__((overloadable)) min(double2 x, double y);
+                                                                ^
+./opencl_spir.h:3586:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 const_func __attribute__((overloadable)) min(double3 x, double y);
+                                                                ^
+./opencl_spir.h:3587:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 const_func __attribute__((overloadable)) min(double4 x, double y);
+                                                                ^
+./opencl_spir.h:3588:65: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 const_func __attribute__((overloadable)) min(double8 x, double y);
+                                                                ^
+./opencl_spir.h:3589:67: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 const_func __attribute__((overloadable)) min(double16 x, double y);
+                                                                  ^
+./opencl_spir.h:3620:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) mix(double x, double y, double a);
+                                                    ^
+./opencl_spir.h:3620:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) mix(double x, double y, double a);
+                                                              ^
+./opencl_spir.h:3620:73: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) mix(double x, double y, double a);
+                                                                        ^
+./opencl_spir.h:3620:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) mix(double x, double y, double a);
+^
+./opencl_spir.h:3626:76: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 const_func __attribute__((overloadable)) mix(double2 x, double2 y, double a);
+                                                                           ^
+./opencl_spir.h:3627:76: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 const_func __attribute__((overloadable)) mix(double3 x, double3 y, double a);
+                                                                           ^
+./opencl_spir.h:3628:76: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 const_func __attribute__((overloadable)) mix(double4 x, double4 y, double a);
+                                                                           ^
+./opencl_spir.h:3629:76: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 const_func __attribute__((overloadable)) mix(double8 x, double8 y, double a);
+                                                                           ^
+./opencl_spir.h:3630:79: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 const_func __attribute__((overloadable)) mix(double16 x, double16 y, double a);
+                                                                              ^
+./opencl_spir.h:3653:57: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) radians(double degrees);
+                                                        ^
+./opencl_spir.h:3653:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) radians(double degrees);
+^
+./opencl_spir.h:3680:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) step(double edge, double x);
+                                                     ^
+./opencl_spir.h:3680:67: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) step(double edge, double x);
+                                                                  ^
+./opencl_spir.h:3680:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) step(double edge, double x);
+^
+./opencl_spir.h:3686:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) step(double edge, double x);
+                                                     ^
+./opencl_spir.h:3686:67: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) step(double edge, double x);
+                                                                  ^
+./opencl_spir.h:3686:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) step(double edge, double x);
+^
+./opencl_spir.h:3687:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 const_func __attribute__((overloadable)) step(double edge, double2 x);
+                                                      ^
+./opencl_spir.h:3688:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 const_func __attribute__((overloadable)) step(double edge, double3 x);
+                                                      ^
+./opencl_spir.h:3689:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 const_func __attribute__((overloadable)) step(double edge, double4 x);
+                                                      ^
+./opencl_spir.h:3690:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 const_func __attribute__((overloadable)) step(double edge, double8 x);
+                                                      ^
+./opencl_spir.h:3691:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 const_func __attribute__((overloadable)) step(double edge, double16 x);
+                                                       ^
+./opencl_spir.h:3729:60: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double x);
+                                                           ^
+./opencl_spir.h:3729:74: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double x);
+                                                                         ^
+./opencl_spir.h:3729:88: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double x);
+                                                                                       ^
+./opencl_spir.h:3729:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double x);
+^
+./opencl_spir.h:3730:61: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double2 x);
+                                                            ^
+./opencl_spir.h:3730:75: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double2 x);
+                                                                          ^
+./opencl_spir.h:3731:61: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double3 x);
+                                                            ^
+./opencl_spir.h:3731:75: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double3 x);
+                                                                          ^
+./opencl_spir.h:3732:61: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double4 x);
+                                                            ^
+./opencl_spir.h:3732:75: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double4 x);
+                                                                          ^
+./opencl_spir.h:3733:61: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double8 x);
+                                                            ^
+./opencl_spir.h:3733:75: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double8 x);
+                                                                          ^
+./opencl_spir.h:3734:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double16 x);
+                                                             ^
+./opencl_spir.h:3734:76: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double16 x);
+                                                                           ^
+./opencl_spir.h:3735:60: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double x);
+                                                           ^
+./opencl_spir.h:3735:74: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double x);
+                                                                         ^
+./opencl_spir.h:3735:88: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double x);
+                                                                                       ^
+./opencl_spir.h:3735:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) smoothstep(double edge0, double edge1, double x);
+^
+./opencl_spir.h:3764:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) sign(double x);
+                                                     ^
+./opencl_spir.h:3764:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) sign(double x);
+^
+./opencl_spir.h:3797:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) dot(double p0, double p1);
+                                                    ^
+./opencl_spir.h:3797:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) dot(double p0, double p1);
+                                                               ^
+./opencl_spir.h:3797:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) dot(double p0, double p1);
+^
+./opencl_spir.h:3798:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) dot(double2 p0, double2 p1);
+^
+./opencl_spir.h:3799:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) dot(double3 p0, double3 p1);
+^
+./opencl_spir.h:3800:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) dot(double4 p0, double4 p1);
+^
+./opencl_spir.h:3814:58: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) distance(double p0, double p1);
+                                                         ^
+./opencl_spir.h:3814:69: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) distance(double p0, double p1);
+                                                                    ^
+./opencl_spir.h:3814:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) distance(double p0, double p1);
+^
+./opencl_spir.h:3815:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) distance(double2 p0, double2 p1);
+^
+./opencl_spir.h:3816:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) distance(double3 p0, double3 p1);
+^
+./opencl_spir.h:3817:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) distance(double4 p0, double4 p1);
+^
+./opencl_spir.h:3831:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) length(double p);
+                                                       ^
+./opencl_spir.h:3831:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) length(double p);
+^
+./opencl_spir.h:3832:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) length(double2 p);
+^
+./opencl_spir.h:3833:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) length(double3 p);
+^
+./opencl_spir.h:3834:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) length(double4 p);
+^
+./opencl_spir.h:3848:59: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) normalize(double p);
+                                                          ^
+./opencl_spir.h:3848:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) normalize(double p);
+^
+./opencl_spir.h:3912:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isequal(double x, double y);
+                                                     ^
+./opencl_spir.h:3912:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isequal(double x, double y);
+                                                               ^
+./opencl_spir.h:3934:57: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isnotequal(double x, double y);
+                                                        ^
+./opencl_spir.h:3934:67: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isnotequal(double x, double y);
+                                                                  ^
+./opencl_spir.h:3956:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isgreater(double x, double y);
+                                                       ^
+./opencl_spir.h:3956:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isgreater(double x, double y);
+                                                                 ^
+./opencl_spir.h:3978:61: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isgreaterequal(double x, double y);
+                                                            ^
+./opencl_spir.h:3978:71: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isgreaterequal(double x, double y);
+                                                                      ^
+./opencl_spir.h:4000:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isless(double x, double y);
+                                                    ^
+./opencl_spir.h:4000:63: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isless(double x, double y);
+                                                              ^
+./opencl_spir.h:4022:58: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) islessequal(double x, double y);
+                                                         ^
+./opencl_spir.h:4022:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) islessequal(double x, double y);
+                                                                   ^
+./opencl_spir.h:4045:60: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) islessgreater(double x, double y);
+                                                           ^
+./opencl_spir.h:4045:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) islessgreater(double x, double y);
+                                                                     ^
+./opencl_spir.h:4067:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isfinite(double);
+                                                      ^
+./opencl_spir.h:4089:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isinf(double);
+                                                   ^
+./opencl_spir.h:4111:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isnan(double);
+                                                   ^
+./opencl_spir.h:4133:55: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isnormal(double);
+                                                      ^
+./opencl_spir.h:4157:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isordered(double x, double y);
+                                                       ^
+./opencl_spir.h:4157:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isordered(double x, double y);
+                                                                 ^
+./opencl_spir.h:4181:58: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isunordered(double x, double y);
+                                                         ^
+./opencl_spir.h:4181:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) isunordered(double x, double y);
+                                                                   ^
+./opencl_spir.h:4207:54: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) signbit(double);
+                                                     ^
+./opencl_spir.h:4337:59: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) bitselect(double a, double b, double c);
+                                                          ^
+./opencl_spir.h:4337:69: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) bitselect(double a, double b, double c);
+                                                                    ^
+./opencl_spir.h:4337:79: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) bitselect(double a, double b, double c);
+                                                                              ^
+./opencl_spir.h:4337:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) bitselect(double a, double b, double c);
+^
+./opencl_spir.h:4787:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) select(double a, double b, long c);
+                                                       ^
+./opencl_spir.h:4787:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) select(double a, double b, long c);
+                                                                 ^
+./opencl_spir.h:4787:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) select(double a, double b, long c);
+^
+./opencl_spir.h:4793:56: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) select(double a, double b, ulong c);
+                                                       ^
+./opencl_spir.h:4793:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) select(double a, double b, ulong c);
+                                                                 ^
+./opencl_spir.h:4793:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) select(double a, double b, ulong c);
+^
+./opencl_spir.h:4958:76: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 __attribute__((overloadable)) vload2(size_t offset, const __global double *p);
+                                                                           ^
+./opencl_spir.h:4959:76: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 __attribute__((overloadable)) vload3(size_t offset, const __global double *p);
+                                                                           ^
+./opencl_spir.h:4960:76: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 __attribute__((overloadable)) vload4(size_t offset, const __global double *p);
+                                                                           ^
+./opencl_spir.h:4961:76: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 __attribute__((overloadable)) vload8(size_t offset, const __global double *p);
+                                                                           ^
+./opencl_spir.h:4962:78: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 __attribute__((overloadable)) vload16(size_t offset, const __global double *p);
+                                                                             ^
+./opencl_spir.h:4963:75: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 __attribute__((overloadable)) vload2(size_t offset, const __local double *p);
+                                                                          ^
+./opencl_spir.h:4964:75: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 __attribute__((overloadable)) vload3(size_t offset, const __local double *p);
+                                                                          ^
+./opencl_spir.h:4965:75: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 __attribute__((overloadable)) vload4(size_t offset, const __local double *p);
+                                                                          ^
+./opencl_spir.h:4966:75: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 __attribute__((overloadable)) vload8(size_t offset, const __local double *p);
+                                                                          ^
+./opencl_spir.h:4967:77: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 __attribute__((overloadable)) vload16(size_t offset, const __local double *p);
+                                                                            ^
+./opencl_spir.h:4968:77: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 __attribute__((overloadable)) vload2(size_t offset, const __private double *p);
+                                                                            ^
+./opencl_spir.h:4969:77: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 __attribute__((overloadable)) vload3(size_t offset, const __private double *p);
+                                                                            ^
+./opencl_spir.h:4970:77: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 __attribute__((overloadable)) vload4(size_t offset, const __private double *p);
+                                                                            ^
+./opencl_spir.h:4971:77: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 __attribute__((overloadable)) vload8(size_t offset, const __private double *p);
+                                                                            ^
+./opencl_spir.h:4972:79: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 __attribute__((overloadable)) vload16(size_t offset, const __private double *p);
+                                                                              ^
+./opencl_spir.h:5037:78: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double2 __attribute__((overloadable)) vload2(size_t offset, const __constant double *p);
+                                                                             ^
+./opencl_spir.h:5038:78: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double3 __attribute__((overloadable)) vload3(size_t offset, const __constant double *p);
+                                                                             ^
+./opencl_spir.h:5039:78: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double4 __attribute__((overloadable)) vload4(size_t offset, const __constant double *p);
+                                                                             ^
+./opencl_spir.h:5040:78: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double8 __attribute__((overloadable)) vload8(size_t offset, const __constant double *p);
+                                                                             ^
+./opencl_spir.h:5041:80: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double16 __attribute__((overloadable)) vload16(size_t offset, const __constant double *p);
+                                                                               ^
+./opencl_spir.h:5193:82: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore2(double2 data, size_t offset, __global double *p);
+                                                                                 ^
+./opencl_spir.h:5194:82: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore3(double3 data, size_t offset, __global double *p);
+                                                                                 ^
+./opencl_spir.h:5195:82: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore4(double4 data, size_t offset, __global double *p);
+                                                                                 ^
+./opencl_spir.h:5196:82: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore8(double8 data, size_t offset, __global double *p);
+                                                                                 ^
+./opencl_spir.h:5197:84: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore16(double16 data, size_t offset, __global double *p);
+                                                                                   ^
+./opencl_spir.h:5198:81: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore2(double2 data, size_t offset, __local double *p);
+                                                                                ^
+./opencl_spir.h:5199:81: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore3(double3 data, size_t offset, __local double *p);
+                                                                                ^
+./opencl_spir.h:5200:81: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore4(double4 data, size_t offset, __local double *p);
+                                                                                ^
+./opencl_spir.h:5201:81: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore8(double8 data, size_t offset, __local double *p);
+                                                                                ^
+./opencl_spir.h:5202:83: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore16(double16 data, size_t offset, __local double *p);
+                                                                                  ^
+./opencl_spir.h:5203:83: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore2(double2 data, size_t offset, __private double *p);
+                                                                                  ^
+./opencl_spir.h:5204:83: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore3(double3 data, size_t offset, __private double *p);
+                                                                                  ^
+./opencl_spir.h:5205:83: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore4(double4 data, size_t offset, __private double *p);
+                                                                                  ^
+./opencl_spir.h:5206:83: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore8(double8 data, size_t offset, __private double *p);
+                                                                                  ^
+./opencl_spir.h:5207:85: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore16(double16 data, size_t offset, __private double *p);
+                                                                                    ^
+./opencl_spir.h:5296:48: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half(double data, size_t offset, __global half *p);
+                                               ^
+./opencl_spir.h:5297:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rte(double data, size_t offset, __global half *p);
+                                                   ^
+./opencl_spir.h:5298:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rtz(double data, size_t offset, __global half *p);
+                                                   ^
+./opencl_spir.h:5299:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rtp(double data, size_t offset, __global half *p);
+                                                   ^
+./opencl_spir.h:5300:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rtn(double data, size_t offset, __global half *p);
+                                                   ^
+./opencl_spir.h:5301:48: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half(double data, size_t offset, __local half *p);
+                                               ^
+./opencl_spir.h:5302:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rte(double data, size_t offset, __local half *p);
+                                                   ^
+./opencl_spir.h:5303:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rtz(double data, size_t offset, __local half *p);
+                                                   ^
+./opencl_spir.h:5304:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rtp(double data, size_t offset, __local half *p);
+                                                   ^
+./opencl_spir.h:5305:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rtn(double data, size_t offset, __local half *p);
+                                                   ^
+./opencl_spir.h:5306:48: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half(double data, size_t offset, __private half *p);
+                                               ^
+./opencl_spir.h:5307:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rte(double data, size_t offset, __private half *p);
+                                                   ^
+./opencl_spir.h:5308:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rtz(double data, size_t offset, __private half *p);
+                                                   ^
+./opencl_spir.h:5309:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rtp(double data, size_t offset, __private half *p);
+                                                   ^
+./opencl_spir.h:5310:52: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstore_half_rtn(double data, size_t offset, __private half *p);
+                                                   ^
+./opencl_spir.h:5633:49: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half(double data, size_t offset, __global half *p);
+                                                ^
+./opencl_spir.h:5640:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rte(double data, size_t offset, __global half *p);
+                                                    ^
+./opencl_spir.h:5647:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rtz(double data, size_t offset, __global half *p);
+                                                    ^
+./opencl_spir.h:5654:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rtp(double data, size_t offset, __global half *p);
+                                                    ^
+./opencl_spir.h:5661:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rtn(double data, size_t offset, __global half *p);
+                                                    ^
+./opencl_spir.h:5668:49: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half(double data, size_t offset, __local half *p);
+                                                ^
+./opencl_spir.h:5675:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rte(double data, size_t offset, __local half *p);
+                                                    ^
+./opencl_spir.h:5682:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rtz(double data, size_t offset, __local half *p);
+                                                    ^
+./opencl_spir.h:5689:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rtp(double data, size_t offset, __local half *p);
+                                                    ^
+./opencl_spir.h:5696:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rtn(double data, size_t offset, __local half *p);
+                                                    ^
+./opencl_spir.h:5703:49: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half(double data, size_t offset, __private half *p);
+                                                ^
+./opencl_spir.h:5710:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rte(double data, size_t offset, __private half *p);
+                                                    ^
+./opencl_spir.h:5717:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rtz(double data, size_t offset, __private half *p);
+                                                    ^
+./opencl_spir.h:5724:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rtp(double data, size_t offset, __private half *p);
+                                                    ^
+./opencl_spir.h:5731:53: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) vstorea_half_rtn(double data, size_t offset, __private half *p);
+                                                    ^
+./opencl_spir.h:5967:69: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+event_t __attribute__((overloadable)) async_work_group_copy(__local double *dst, const __global double *src, size_t num_elements, event_t event);
+                                                                    ^
+./opencl_spir.h:5967:97: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+event_t __attribute__((overloadable)) async_work_group_copy(__local double *dst, const __global double *src, size_t num_elements, event_t event);
+                                                                                                ^
+./opencl_spir.h:5973:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+event_t __attribute__((overloadable)) async_work_group_copy(__global double *dst, const __local double *src, size_t num_elements, event_t event);
+                                                                     ^
+./opencl_spir.h:5973:97: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+event_t __attribute__((overloadable)) async_work_group_copy(__global double *dst, const __local double *src, size_t num_elements, event_t event);
+                                                                                                ^
+./opencl_spir.h:6124:77: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+event_t __attribute__((overloadable)) async_work_group_strided_copy(__local double *dst, const __global double *src, size_t num_elements, size_t src_stride, event_t event);
+                                                                            ^
+./opencl_spir.h:6124:105: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+event_t __attribute__((overloadable)) async_work_group_strided_copy(__local double *dst, const __global double *src, size_t num_elements, size_t src_stride, event_t event);
+                                                                                                        ^
+./opencl_spir.h:6130:78: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+event_t __attribute__((overloadable)) async_work_group_strided_copy(__global double *dst, const __local double *src, size_t num_elements, size_t dst_stride, event_t event);
+                                                                             ^
+./opencl_spir.h:6130:105: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+event_t __attribute__((overloadable)) async_work_group_strided_copy(__global double *dst, const __local double *src, size_t num_elements, size_t dst_stride, event_t event);
+                                                                                                        ^
+./opencl_spir.h:6221:60: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+void __attribute__((overloadable)) prefetch(const __global double *p, size_t num_elements);
+                                                           ^
+./opencl_spir.h:7662:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+char const_func __attribute__((overloadable)) convert_char_rte(double);
+                                                               ^
+./opencl_spir.h:7663:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+char const_func __attribute__((overloadable)) convert_char_sat_rte(double);
+                                                                   ^
+./opencl_spir.h:7664:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+char const_func __attribute__((overloadable)) convert_char_rtz(double);
+                                                               ^
+./opencl_spir.h:7665:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+char const_func __attribute__((overloadable)) convert_char_sat_rtz(double);
+                                                                   ^
+./opencl_spir.h:7666:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+char const_func __attribute__((overloadable)) convert_char_rtp(double);
+                                                               ^
+./opencl_spir.h:7667:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+char const_func __attribute__((overloadable)) convert_char_sat_rtp(double);
+                                                                   ^
+./opencl_spir.h:7668:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+char const_func __attribute__((overloadable)) convert_char_rtn(double);
+                                                               ^
+./opencl_spir.h:7669:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+char const_func __attribute__((overloadable)) convert_char_sat_rtn(double);
+                                                                   ^
+./opencl_spir.h:7670:60: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+char const_func __attribute__((overloadable)) convert_char(double);
+                                                           ^
+./opencl_spir.h:7671:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+char const_func __attribute__((overloadable)) convert_char_sat(double);
+                                                               ^
+./opencl_spir.h:7762:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uchar const_func __attribute__((overloadable)) convert_uchar_rte(double);
+                                                                 ^
+./opencl_spir.h:7763:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uchar const_func __attribute__((overloadable)) convert_uchar_sat_rte(double);
+                                                                     ^
+./opencl_spir.h:7764:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uchar const_func __attribute__((overloadable)) convert_uchar_rtz(double);
+                                                                 ^
+./opencl_spir.h:7765:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uchar const_func __attribute__((overloadable)) convert_uchar_sat_rtz(double);
+                                                                     ^
+./opencl_spir.h:7766:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uchar const_func __attribute__((overloadable)) convert_uchar_rtp(double);
+                                                                 ^
+./opencl_spir.h:7767:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uchar const_func __attribute__((overloadable)) convert_uchar_sat_rtp(double);
+                                                                     ^
+./opencl_spir.h:7768:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uchar const_func __attribute__((overloadable)) convert_uchar_rtn(double);
+                                                                 ^
+./opencl_spir.h:7769:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uchar const_func __attribute__((overloadable)) convert_uchar_sat_rtn(double);
+                                                                     ^
+./opencl_spir.h:7770:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uchar const_func __attribute__((overloadable)) convert_uchar(double);
+                                                             ^
+./opencl_spir.h:7771:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uchar const_func __attribute__((overloadable)) convert_uchar_sat(double);
+                                                                 ^
+./opencl_spir.h:7863:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+short const_func __attribute__((overloadable)) convert_short_rte(double);
+                                                                 ^
+./opencl_spir.h:7864:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+short const_func __attribute__((overloadable)) convert_short_sat_rte(double);
+                                                                     ^
+./opencl_spir.h:7865:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+short const_func __attribute__((overloadable)) convert_short_rtz(double);
+                                                                 ^
+./opencl_spir.h:7866:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+short const_func __attribute__((overloadable)) convert_short_sat_rtz(double);
+                                                                     ^
+./opencl_spir.h:7867:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+short const_func __attribute__((overloadable)) convert_short_rtp(double);
+                                                                 ^
+./opencl_spir.h:7868:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+short const_func __attribute__((overloadable)) convert_short_sat_rtp(double);
+                                                                     ^
+./opencl_spir.h:7869:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+short const_func __attribute__((overloadable)) convert_short_rtn(double);
+                                                                 ^
+./opencl_spir.h:7870:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+short const_func __attribute__((overloadable)) convert_short_sat_rtn(double);
+                                                                     ^
+./opencl_spir.h:7871:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+short const_func __attribute__((overloadable)) convert_short(double);
+                                                             ^
+./opencl_spir.h:7872:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+short const_func __attribute__((overloadable)) convert_short_sat(double);
+                                                                 ^
+./opencl_spir.h:7964:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ushort const_func __attribute__((overloadable)) convert_ushort_rte(double);
+                                                                   ^
+./opencl_spir.h:7965:72: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ushort const_func __attribute__((overloadable)) convert_ushort_sat_rte(double);
+                                                                       ^
+./opencl_spir.h:7966:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ushort const_func __attribute__((overloadable)) convert_ushort_rtz(double);
+                                                                   ^
+./opencl_spir.h:7967:72: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ushort const_func __attribute__((overloadable)) convert_ushort_sat_rtz(double);
+                                                                       ^
+./opencl_spir.h:7968:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ushort const_func __attribute__((overloadable)) convert_ushort_rtp(double);
+                                                                   ^
+./opencl_spir.h:7969:72: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ushort const_func __attribute__((overloadable)) convert_ushort_sat_rtp(double);
+                                                                       ^
+./opencl_spir.h:7970:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ushort const_func __attribute__((overloadable)) convert_ushort_rtn(double);
+                                                                   ^
+./opencl_spir.h:7971:72: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ushort const_func __attribute__((overloadable)) convert_ushort_sat_rtn(double);
+                                                                       ^
+./opencl_spir.h:7972:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ushort const_func __attribute__((overloadable)) convert_ushort(double);
+                                                               ^
+./opencl_spir.h:7973:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ushort const_func __attribute__((overloadable)) convert_ushort_sat(double);
+                                                                   ^
+./opencl_spir.h:8065:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) convert_int_rte(double);
+                                                             ^
+./opencl_spir.h:8066:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) convert_int_sat_rte(double);
+                                                                 ^
+./opencl_spir.h:8067:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) convert_int_rtz(double);
+                                                             ^
+./opencl_spir.h:8068:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) convert_int_sat_rtz(double);
+                                                                 ^
+./opencl_spir.h:8069:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) convert_int_rtp(double);
+                                                             ^
+./opencl_spir.h:8070:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) convert_int_sat_rtp(double);
+                                                                 ^
+./opencl_spir.h:8071:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) convert_int_rtn(double);
+                                                             ^
+./opencl_spir.h:8072:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) convert_int_sat_rtn(double);
+                                                                 ^
+./opencl_spir.h:8073:58: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) convert_int(double);
+                                                         ^
+./opencl_spir.h:8074:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+int const_func __attribute__((overloadable)) convert_int_sat(double);
+                                                             ^
+./opencl_spir.h:8166:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uint const_func __attribute__((overloadable)) convert_uint_rte(double);
+                                                               ^
+./opencl_spir.h:8167:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uint const_func __attribute__((overloadable)) convert_uint_sat_rte(double);
+                                                                   ^
+./opencl_spir.h:8168:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uint const_func __attribute__((overloadable)) convert_uint_rtz(double);
+                                                               ^
+./opencl_spir.h:8169:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uint const_func __attribute__((overloadable)) convert_uint_sat_rtz(double);
+                                                                   ^
+./opencl_spir.h:8170:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uint const_func __attribute__((overloadable)) convert_uint_rtp(double);
+                                                               ^
+./opencl_spir.h:8171:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uint const_func __attribute__((overloadable)) convert_uint_sat_rtp(double);
+                                                                   ^
+./opencl_spir.h:8172:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uint const_func __attribute__((overloadable)) convert_uint_rtn(double);
+                                                               ^
+./opencl_spir.h:8173:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uint const_func __attribute__((overloadable)) convert_uint_sat_rtn(double);
+                                                                   ^
+./opencl_spir.h:8174:60: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uint const_func __attribute__((overloadable)) convert_uint(double);
+                                                           ^
+./opencl_spir.h:8175:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+uint const_func __attribute__((overloadable)) convert_uint_sat(double);
+                                                               ^
+./opencl_spir.h:8266:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+long const_func __attribute__((overloadable)) convert_long_rte(double);
+                                                               ^
+./opencl_spir.h:8267:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+long const_func __attribute__((overloadable)) convert_long_sat_rte(double);
+                                                                   ^
+./opencl_spir.h:8268:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+long const_func __attribute__((overloadable)) convert_long_rtz(double);
+                                                               ^
+./opencl_spir.h:8269:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+long const_func __attribute__((overloadable)) convert_long_sat_rtz(double);
+                                                                   ^
+./opencl_spir.h:8270:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+long const_func __attribute__((overloadable)) convert_long_rtp(double);
+                                                               ^
+./opencl_spir.h:8271:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+long const_func __attribute__((overloadable)) convert_long_sat_rtp(double);
+                                                                   ^
+./opencl_spir.h:8272:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+long const_func __attribute__((overloadable)) convert_long_rtn(double);
+                                                               ^
+./opencl_spir.h:8273:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+long const_func __attribute__((overloadable)) convert_long_sat_rtn(double);
+                                                                   ^
+./opencl_spir.h:8274:60: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+long const_func __attribute__((overloadable)) convert_long(double);
+                                                           ^
+./opencl_spir.h:8275:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+long const_func __attribute__((overloadable)) convert_long_sat(double);
+                                                               ^
+./opencl_spir.h:8367:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ulong const_func __attribute__((overloadable)) convert_ulong_rte(double);
+                                                                 ^
+./opencl_spir.h:8368:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ulong const_func __attribute__((overloadable)) convert_ulong_sat_rte(double);
+                                                                     ^
+./opencl_spir.h:8369:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ulong const_func __attribute__((overloadable)) convert_ulong_rtz(double);
+                                                                 ^
+./opencl_spir.h:8370:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ulong const_func __attribute__((overloadable)) convert_ulong_sat_rtz(double);
+                                                                     ^
+./opencl_spir.h:8371:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ulong const_func __attribute__((overloadable)) convert_ulong_rtp(double);
+                                                                 ^
+./opencl_spir.h:8372:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ulong const_func __attribute__((overloadable)) convert_ulong_sat_rtp(double);
+                                                                     ^
+./opencl_spir.h:8373:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ulong const_func __attribute__((overloadable)) convert_ulong_rtn(double);
+                                                                 ^
+./opencl_spir.h:8374:70: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ulong const_func __attribute__((overloadable)) convert_ulong_sat_rtn(double);
+                                                                     ^
+./opencl_spir.h:8375:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ulong const_func __attribute__((overloadable)) convert_ulong(double);
+                                                             ^
+./opencl_spir.h:8376:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+ulong const_func __attribute__((overloadable)) convert_ulong_sat(double);
+                                                                 ^
+./opencl_spir.h:8423:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+float const_func __attribute__((overloadable)) convert_float_rte(double);
+                                                                 ^
+./opencl_spir.h:8424:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+float const_func __attribute__((overloadable)) convert_float_rtz(double);
+                                                                 ^
+./opencl_spir.h:8425:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+float const_func __attribute__((overloadable)) convert_float_rtp(double);
+                                                                 ^
+./opencl_spir.h:8426:66: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+float const_func __attribute__((overloadable)) convert_float_rtn(double);
+                                                                 ^
+./opencl_spir.h:8427:62: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+float const_func __attribute__((overloadable)) convert_float(double);
+                                                             ^
+./opencl_spir.h:8429:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(char);
+^
+./opencl_spir.h:8430:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(char);
+^
+./opencl_spir.h:8431:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(char);
+^
+./opencl_spir.h:8432:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(char);
+^
+./opencl_spir.h:8433:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(char);
+^
+./opencl_spir.h:8434:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(uchar);
+^
+./opencl_spir.h:8435:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(uchar);
+^
+./opencl_spir.h:8436:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(uchar);
+^
+./opencl_spir.h:8437:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(uchar);
+^
+./opencl_spir.h:8438:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(uchar);
+^
+./opencl_spir.h:8439:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(short);
+^
+./opencl_spir.h:8440:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(short);
+^
+./opencl_spir.h:8441:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(short);
+^
+./opencl_spir.h:8442:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(short);
+^
+./opencl_spir.h:8443:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(short);
+^
+./opencl_spir.h:8444:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(ushort);
+^
+./opencl_spir.h:8445:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(ushort);
+^
+./opencl_spir.h:8446:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(ushort);
+^
+./opencl_spir.h:8447:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(ushort);
+^
+./opencl_spir.h:8448:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(ushort);
+^
+./opencl_spir.h:8449:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(int);
+^
+./opencl_spir.h:8450:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(int);
+^
+./opencl_spir.h:8451:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(int);
+^
+./opencl_spir.h:8452:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(int);
+^
+./opencl_spir.h:8453:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(int);
+^
+./opencl_spir.h:8454:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(uint);
+^
+./opencl_spir.h:8455:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(uint);
+^
+./opencl_spir.h:8456:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(uint);
+^
+./opencl_spir.h:8457:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(uint);
+^
+./opencl_spir.h:8458:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(uint);
+^
+./opencl_spir.h:8459:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(long);
+^
+./opencl_spir.h:8460:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(long);
+^
+./opencl_spir.h:8461:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(long);
+^
+./opencl_spir.h:8462:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(long);
+^
+./opencl_spir.h:8463:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(long);
+^
+./opencl_spir.h:8464:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(ulong);
+^
+./opencl_spir.h:8465:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(ulong);
+^
+./opencl_spir.h:8466:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(ulong);
+^
+./opencl_spir.h:8467:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(ulong);
+^
+./opencl_spir.h:8468:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(ulong);
+^
+./opencl_spir.h:8469:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(float);
+^
+./opencl_spir.h:8470:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(float);
+^
+./opencl_spir.h:8471:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(float);
+^
+./opencl_spir.h:8472:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(float);
+^
+./opencl_spir.h:8473:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(float);
+^
+./opencl_spir.h:8474:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(double);
+                                                                   ^
+./opencl_spir.h:8474:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rte(double);
+^
+./opencl_spir.h:8475:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(double);
+                                                                   ^
+./opencl_spir.h:8475:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtz(double);
+^
+./opencl_spir.h:8476:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(double);
+                                                                   ^
+./opencl_spir.h:8476:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtp(double);
+^
+./opencl_spir.h:8477:68: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(double);
+                                                                   ^
+./opencl_spir.h:8477:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double_rtn(double);
+^
+./opencl_spir.h:8478:64: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(double);
+                                                               ^
+./opencl_spir.h:8478:1: error: use of type 'double' requires cl_khr_fp64 extension to be enabled
+double const_func __attribute__((overloadable)) convert_double(double);
+^
+50 warnings and 546 errors generated.

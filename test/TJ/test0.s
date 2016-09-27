@@ -11,32 +11,36 @@ target triple = "x86_64-unknown-linux-gnu"
 @CC = common global [1536 x [1536 x float]] zeroinitializer, align 16
 
 ; Function Attrs: nounwind uwtable
-define i32 @main(i32, i8**) #0 {
-  %3 = alloca i32, align 4
-  %4 = alloca i8**, align 8
-  %5 = alloca i32, align 4
-  store i32 %0, i32* %3, align 4
-  store i8** %1, i8*** %4, align 8
-  %6 = load i8**, i8*** %4, align 8
-  %7 = getelementptr inbounds i8*, i8** %6, i64 0
-  %8 = load i8*, i8** %7, align 8
-  %9 = getelementptr inbounds i8, i8* %8, i64 0
-  %10 = load i8, i8* %9, align 1
-  %11 = sext i8 %10 to i32
-  store i32 %11, i32* %5, align 4
-  %12 = load i32, i32* %5, align 4
-  %13 = sext i32 %12 to i64
-  %14 = getelementptr inbounds [1536 x float], [1536 x float]* @B, i64 0, i64 %13
-  %15 = load float, float* %14, align 4
-  %16 = load i32, i32* %5, align 4
-  %17 = sext i32 %16 to i64
-  %18 = getelementptr inbounds [1536 x float], [1536 x float]* @C, i64 0, i64 %17
-  %19 = load float, float* %18, align 4
-  %20 = fadd float %15, %19
-  %21 = load i32, i32* %5, align 4
-  %22 = sext i32 %21 to i64
-  %23 = getelementptr inbounds [1536 x float], [1536 x float]* @A, i64 0, i64 %22
-  store float %20, float* %23, align 4
+define i32 @main(i32 %argc, i8** %argv) #0 {
+entry:
+  %argc.addr = alloca i32, align 4
+  %argv.addr = alloca i8**, align 8
+  %i = alloca i32, align 4
+  %j = alloca i32, align 4
+  %k = alloca i32, align 4
+  %q = alloca i32, align 4
+  store i32 %argc, i32* %argc.addr, align 4
+  store i8** %argv, i8*** %argv.addr, align 8
+  %0 = load i8**, i8*** %argv.addr, align 8
+  %arrayidx = getelementptr inbounds i8*, i8** %0, i64 0
+  %1 = load i8*, i8** %arrayidx, align 8
+  %arrayidx1 = getelementptr inbounds i8, i8* %1, i64 0
+  %2 = load i8, i8* %arrayidx1, align 1
+  %conv = sext i8 %2 to i32
+  store i32 %conv, i32* %q, align 4
+  %3 = load i32, i32* %q, align 4
+  %idxprom = sext i32 %3 to i64
+  %arrayidx2 = getelementptr inbounds [1536 x float], [1536 x float]* @B, i64 0, i64 %idxprom
+  %4 = load float, float* %arrayidx2, align 4
+  %5 = load i32, i32* %q, align 4
+  %idxprom3 = sext i32 %5 to i64
+  %arrayidx4 = getelementptr inbounds [1536 x float], [1536 x float]* @C, i64 0, i64 %idxprom3
+  %6 = load float, float* %arrayidx4, align 4
+  %add = fadd float %4, %6
+  %7 = load i32, i32* %q, align 4
+  %idxprom5 = sext i32 %7 to i64
+  %arrayidx6 = getelementptr inbounds [1536 x float], [1536 x float]* @A, i64 0, i64 %idxprom5
+  store float %add, float* %arrayidx6, align 4
   ret i32 0
 }
 
@@ -44,4 +48,4 @@ attributes #0 = { nounwind uwtable "disable-tail-calls"="false" "less-precise-fp
 
 !llvm.ident = !{!0}
 
-!0 = !{!"clang version 3.9.1 (http://llvm.org/git/clang.git 07307f95d5c82d453cdc5c23f9ccd53d5ff75426) (https://github.com/tj-sun/llvm.git 69e56220929e4bffe0cd01251f47e1540809c3d9)"}
+!0 = !{!"clang version 3.9.1 (http://llvm.org/git/clang.git 07307f95d5c82d453cdc5c23f9ccd53d5ff75426) (https://github.com/tj-sun/llvm.git 805bc7c089155ab329a63b926e11904e118c35d5)"}

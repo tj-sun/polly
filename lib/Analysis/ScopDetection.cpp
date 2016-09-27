@@ -66,7 +66,6 @@
 #include "llvm/Support/Debug.h"
 #include <set>
 #include <stack>
-
 using namespace llvm;
 using namespace polly;
 
@@ -1190,7 +1189,7 @@ Region *ScopDetection::expandRegion(Region &R) {
 }
 static bool regionWithoutLoops(Region &R, LoopInfo *LI) {
   if (PollyOpenCLKernel && R.isTopLevelRegion())
-      return true;
+      return false;
   for (const BasicBlock *BB : R.blocks())
     if (R.contains(LI->getLoopFor(BB)))
       return false;
@@ -1224,8 +1223,9 @@ void ScopDetection::findScops(Region &R) {
     invalid<ReportUnprofitable>(Context, /*Assert=*/true, &R);
   else
     RegionIsValid = isValidRegion(Context);
-  errs() << regionWithoutLoops(R, LI) << "\n";
-  errs() << isValidRegion(Context) << "\n";
+
+  errs() << "regionWithoutLoops: " << regionWithoutLoops(R, LI) << "\n";
+  errs() << "isValidRegion: " << isValidRegion(Context) << "\n";
 
   bool HasErrors = !RegionIsValid || Context.Log.size() > 0;
 
@@ -1383,7 +1383,7 @@ bool ScopDetection::isValidRegion(DetectionContext &Context) const {
 
   DEBUG(dbgs() << "Checking region: " << CurRegion.getNameStr() << "\n\t");
 
-  if (CurRegion.isTopLevelRegion()) {
+  if (CurRegion.isTopLevelRegion() && !PollyOpenCLKernel) {
     DEBUG(dbgs() << "Top level region is invalid\n");
     return false;
   }
@@ -1526,10 +1526,6 @@ bool ScopDetection::runOnFunction(llvm::Function &F) {
   DT = &getAnalysis<DominatorTreeWrapperPass>().getDomTree();
   Region *TopRegion = RI->getTopLevelRegion();
 
-  // for (auto &b : F) {
-  //   errs() << "---BLOCK---\n";
-  //   b.dump();
-  // }
   releaseMemory();
 
   if (OnlyFunction != "" && !F.getName().count(OnlyFunction))

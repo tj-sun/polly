@@ -399,22 +399,27 @@ void ScopBuilder::buildMemoryAccess(MemAccInst Inst, Loop *L) {
 }
 
 void ScopBuilder::buildAccessFunctions(Region &SR) {
-
+  errs() << "buildAccessFunctions Region\n";
   if (scop->isNonAffineSubRegion(&SR)) {
     for (BasicBlock *BB : SR.blocks())
       buildAccessFunctions(*BB, &SR);
     return;
   }
 
-  for (auto I = SR.element_begin(), E = SR.element_end(); I != E; ++I)
-    if (I->isSubRegion())
+  for (auto I = SR.element_begin(), E = SR.element_end(); I != E; ++I) {
+    if (I->isSubRegion()) {
+      // errs() << "SubRegion\n";
       buildAccessFunctions(*I->getNodeAs<Region>());
-    else
+    } else {
+      // errs() << "BasicBlock\n";
       buildAccessFunctions(*I->getNodeAs<BasicBlock>());
+    }
+  }
 }
 
 void ScopBuilder::buildStmts(Region &SR) {
 
+  errs() << "buildStmts start\n";
   if (scop->isNonAffineSubRegion(&SR)) {
     scop->addScopStmt(nullptr, &SR);
     return;
@@ -425,6 +430,11 @@ void ScopBuilder::buildStmts(Region &SR) {
       buildStmts(*I->getNodeAs<Region>());
     else
       scop->addScopStmt(I->getNodeAs<BasicBlock>(), nullptr);
+  errs() << "Number of statements: " << scop->getSize() << "\n";
+  for (auto &S : scop->Stmts) {
+    S.dump();
+  }
+  errs() << "buildStmts end\n";
 }
 
 void ScopBuilder::buildAccessFunctions(BasicBlock &BB,
@@ -432,6 +442,9 @@ void ScopBuilder::buildAccessFunctions(BasicBlock &BB,
                                        bool IsExitBlock) {
   // We do not build access functions for error blocks, as they may contain
   // instructions we can not model.
+  errs() << "buildAccessFunctions BasicBlock\n";
+  if (&BB)
+    BB.dump();
   if (isErrorBlock(BB, scop->getRegion(), LI, DT) && !IsExitBlock)
     return;
 
@@ -637,6 +650,7 @@ void ScopBuilder::buildScop(Region &R, AssumptionCache &AC) {
   scop.reset(new Scop(R, SE, LI, *SD.getDetectionContext(&R)));
 
   buildStmts(R);
+
   buildAccessFunctions(R);
 
   // In case the region does not have an exiting block we will later (during
@@ -658,6 +672,7 @@ void ScopBuilder::buildScop(Region &R, AssumptionCache &AC) {
                      BP->getType(), false, {AF}, {}, GlobalRead);
 
   scop->init(AA, AC, DT, LI);
+  errs() << "End buildScop()\n";
 }
 
 ScopBuilder::ScopBuilder(Region *R, AssumptionCache &AC, AliasAnalysis &AA,
@@ -673,6 +688,7 @@ ScopBuilder::ScopBuilder(Region *R, AssumptionCache &AC, AliasAnalysis &AA,
   emitOptimizationRemarkAnalysis(F->getContext(), DEBUG_TYPE, *F, Beg, Msg);
 
   buildScop(*R, AC);
+  // errs() << "HERE\n";
 
   DEBUG(scop->print(dbgs()));
 

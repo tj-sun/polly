@@ -8,8 +8,12 @@
 
 typedef float DATA_TYPE;
 
-__kernel void Convolution2D_kernel(__global DATA_TYPE *A, __global DATA_TYPE *B, int ni, int nj) 
+__kernel void Add1D_kernel(__global DATA_TYPE *A, __global DATA_TYPE *B, int ni) 
 {
     int i = get_global_id(0);
-    A[i] = B[i]*2;
+    // int i = ni;
+    A[i] = 2*B[i];
+    // for (int t=0;t<100;t++) {
+    //     A[i*50+j] = B[i*50+j]*2;
+    // }
 }

@@ -1187,8 +1187,9 @@ Region *ScopDetection::expandRegion(Region &R) {
 
   return LastValidRegion.release();
 }
+
 static bool regionWithoutLoops(Region &R, LoopInfo *LI) {
-  if (PollyOpenCLKernel && R.isTopLevelRegion())
+  if (R.isTopLevelRegion())
       return false;
   for (const BasicBlock *BB : R.blocks())
     if (R.contains(LI->getLoopFor(BB)))
@@ -1224,8 +1225,8 @@ void ScopDetection::findScops(Region &R) {
   else
     RegionIsValid = isValidRegion(Context);
 
-  errs() << "regionWithoutLoops: " << regionWithoutLoops(R, LI) << "\n";
-  errs() << "isValidRegion: " << isValidRegion(Context) << "\n";
+  // errs() << "regionWithoutLoops: " << regionWithoutLoops(R, LI) << "\n";
+  // errs() << "isValidRegion: " << isValidRegion(Context) << "\n";
 
   bool HasErrors = !RegionIsValid || Context.Log.size() > 0;
 
@@ -1382,17 +1383,16 @@ bool ScopDetection::isValidRegion(DetectionContext &Context) const {
   Region &CurRegion = Context.CurRegion;
 
   DEBUG(dbgs() << "Checking region: " << CurRegion.getNameStr() << "\n\t");
-
-  if (CurRegion.isTopLevelRegion() && !PollyOpenCLKernel) {
-    DEBUG(dbgs() << "Top level region is invalid\n");
-    return false;
-  }
-
   if (!CurRegion.getEntry()->getName().count(OnlyRegion)) {
     DEBUG({
       dbgs() << "Region entry does not match -polly-region-only";
       dbgs() << "\n";
     });
+    return false;
+  }
+
+  if (CurRegion.isTopLevelRegion()) {
+    DEBUG(dbgs() << "Top level region is invalid\n");
     return false;
   }
 
@@ -1404,7 +1404,7 @@ bool ScopDetection::isValidRegion(DetectionContext &Context) const {
 
   if (!allBlocksValid(Context))
     return false;
-
+  errs() << "Post all blocks valid\n";
   DebugLoc DbgLoc;
   if (!isReducibleRegion(CurRegion, DbgLoc))
     return invalid<ReportIrreducibleRegion>(Context, /*Assert=*/true,
@@ -1559,6 +1559,7 @@ bool ScopDetection::runOnFunction(llvm::Function &F) {
 
   assert(ValidRegions.size() <= DetectionContextMap.size() &&
          "Cached more results than valid regions");
+
   return false;
 }
 

@@ -2203,7 +2203,9 @@ __isl_give isl_set *Scop::getDomainConditions(BasicBlock *BB) const {
 }
 
 bool Scop::buildDomains(Region *R, DominatorTree &DT, LoopInfo &LI) {
-
+  if (PollyOpenCLKernel && R->isTopLevelRegion()) {
+    errs() << "buildDomains() for top level region\n";
+  }
   bool IsOnlyNonAffineRegion = isNonAffineSubRegion(R);
   auto *EntryBB = R->getEntry();
   auto *L = IsOnlyNonAffineRegion ? nullptr : LI.getLoopFor(EntryBB);
@@ -3050,22 +3052,21 @@ Scop::Scop(Region &R, ScalarEvolution &ScalarEvolution, LoopInfo &LI,
 void Scop::init(AliasAnalysis &AA, AssumptionCache &AC, DominatorTree &DT,
                 LoopInfo &LI) {
   buildInvariantEquivalenceClasses();
-
   if (!buildDomains(&R, DT, LI))
     return;
-
   addUserAssumptions(AC, DT, LI);
 
+  errs() << "after buildDomains()\n";
   // Remove empty statements.
   // Exit early in case there are no executable statements left in this scop.
   simplifySCoP(false, DT, LI);
   if (Stmts.empty())
     return;
-
+  errs() << "after simplifyScoP()\n";
   // The ScopStmts now have enough information to initialize themselves.
   for (ScopStmt &Stmt : Stmts)
     Stmt.init(LI);
-
+  errs() << "after initializae statements\n";
   // Check early for profitability. Afterwards it cannot change anymore,
   // only the runtime context could become infeasible.
   if (!isProfitable()) {
@@ -4214,7 +4215,7 @@ bool ScopInfoRegionPass::runOnRegion(Region *R, RGPassManager &RGM) {
   auto &AC = getAnalysis<AssumptionCacheTracker>().getAssumptionCache(*F);
 
   ScopBuilder SB(R, AC, AA, DL, DT, LI, SD, SE);
-  S = SB.getScop(); // take ownership of scop object
+  S = SB.getScop();  // take ownership of scop object
   return false;
 }
 
